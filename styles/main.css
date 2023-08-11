@@ -51,10 +51,15 @@ table {
 }
 body {
     font-family: "Vazirmatn", sans-serif;
+    font-smooth: auto;
 }
 section {
     padding: var(--main-padding);
     box-sizing: border-box;
+}
+p {
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 /* Navigation */
 .logo img {
@@ -184,11 +189,13 @@ header .nav {
     background-position: center center;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     animation: hero-image 35s infinite;
     background-image: url("../images/hero-2.webp");
+    color: #FFF;
 }
 .hero h1 {
     color: #FFF;
@@ -196,7 +203,9 @@ header .nav {
     text-transform: uppercase;
     font-family: "Akshar", sans-serif;
     font-weight: 800;
-    letter-spacing: -4px;
+    /* letter-spacing: -4px; */
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 45em) {
     :root {
