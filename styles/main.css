@@ -52,7 +52,15 @@ table {
 body {
     font-family: "Vazirmatn", sans-serif;
 }
+section {
+    padding: var(--main-padding);
+    box-sizing: border-box;
+}
 /* Navigation */
+.logo img {
+    display: block;
+    width: 35px;
+}
 header {
     padding: var(--main-padding);
     position: fixed;
@@ -64,6 +72,7 @@ header {
 header .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav__button,
 .nav__close {
@@ -73,8 +82,6 @@ header .nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    border-radius: 50px;
     overflow: hidden;
 }
 .nav__button:hover,
@@ -90,6 +97,9 @@ header .nav {
     background-color: #000;
 }
 .nav__button {
+    display: flex;
+}
+.nav__button span {
     background-color: #FFF;
 }
 .nav__button span:nth-child(2) {
@@ -177,24 +187,11 @@ header .nav {
     justify-content: center;
     text-align: center;
     animation: hero-image 35s infinite;
-}
-@keyframes hero-image {
-    0%, 23% {
-        background-image: url("../images/hero-2.webp");
-    }
-    33%, 56% {
-        background-image: url("../images/hero-1-alt.webp");
-    }
-    66%, 90% {
-        background-image: url("../images/hero-3.webp");
-    }
-    100% {
-        background-image: url("../images/hero-2.webp");
-    }
+    background-image: url("../images/hero-2.webp");
 }
 .hero h1 {
     color: #FFF;
-    font-size: 7rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-family: "Akshar", sans-serif;
     font-weight: 800;
@@ -204,9 +201,41 @@ header .nav {
     :root {
         --main-padding: 3rem;
     }
+    header .nav {
+        align-items: flex-start;
+    }
+    .logo img {
+        width: 40px;
+    }
+    .nav__button,
+    .nav__close { 
+        width: 25px;
+        height: 25px;   
+    }
+    .nav__button span,
+    .nav__close span {
+        height: 3px;
+    }
     .nav__close {
         margin-top: 3rem;
         margin-right: 3rem;
+    }
+    .hero h1 {
+        font-size: 7rem;
+    }
+    @keyframes hero-image {
+        0%, 23% {
+            background-image: url("../images/hero-2.webp");
+        }
+        33%, 56% {
+            background-image: url("../images/hero-1-alt.webp");
+        }
+        66%, 90% {
+            background-image: url("../images/hero-3.webp");
+        }
+        100% {
+            background-image: url("../images/hero-2.webp");
+        }
     }
 }
 @media screen and (min-width: 64em) {}
