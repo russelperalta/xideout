@@ -237,6 +237,7 @@ header .nav {
 }
 .product__text {
     padding: 1rem;
+    font-weight: 500;
 }
 /* Footer */
 .footer {
@@ -250,13 +251,17 @@ header .nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 .footer h3 {
-    font-size: 5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-family: "Akshar", sans-serif;
     font-weight: 800;
-    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.footer p {
+    font-weight: 500;
     margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 45em) {
@@ -299,5 +304,8 @@ header .nav {
             background-image: url("../images/hero-2.webp");
         }
     } */
+    .footer h3 {
+        font-size: 5rem;
+    }
 }
 @media screen and (min-width: 64em) {}
